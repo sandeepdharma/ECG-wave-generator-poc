@@ -7,7 +7,7 @@ const ECGTrainging2 = ({ data }) => {
   const animationRef = useRef(null);
   const phaseRef = useRef(0);
   const animationSpeed = 3; // Adjust animation speed as needed
-
+  // console.log(data);
   useEffect(() => {
     let parts = data.name.split("_");
     if (parts.length >= 3) {
@@ -61,6 +61,7 @@ const ECGTrainging2 = ({ data }) => {
       }
     };
 
+    // Trigger animation
     animate();
 
     return () => cancelAnimationFrame(animationRef.current);
